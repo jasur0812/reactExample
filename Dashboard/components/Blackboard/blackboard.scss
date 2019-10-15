@@ -1,0 +1,128 @@
+.blackboard {
+  background-color: #4a4a4a;
+  color: #b8b8b8;
+  padding: 20px 10px;
+  border-radius: 2px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  max-height: 300px;
+  &__header {
+    flex-shrink: 0;
+  }
+  &__body {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    &Main {
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+    }
+    &NewMessage {
+      flex-shrink: 0;
+    }
+  }
+  &__messages {
+    border: 1px solid #907c7c;
+    border-radius: 2px;
+    padding: 10px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    flex-grow: 1;
+  }
+  &__messageInput {
+    display: flex;
+    align-items: flex-end;
+    input {
+      background-color: transparent;
+      border: 1px solid #907c7c;
+      border-radius: 10px;
+      color: #dedede;
+      &:hover, &:active {
+        border: 1px solid #907c7c;
+      }
+      &:focus {
+        border: 1px solid #907c7c;
+        background: transparent;
+        color: #dedede;
+      }
+    }
+  }
+  &__helperText {
+    color: #907c7c;
+    font-size: 10px;
+  }
+  .Select {
+    display: inline-block;
+    height: 30px;
+    vertical-align: middle;
+    margin: 10px 0;
+    width: 100%;
+    text-align: left;
+
+    &.small {
+
+      input {
+        vertical-align: middle;
+      }
+      .Select-control {
+        background-color: transparent;
+        padding: 0 3px;
+        margin-top: -5px;
+      }
+      .Select-value {
+        padding: 0;
+        margin: 0;
+        width: auto;
+        background: transparent;
+        display: inline;
+
+        span {
+          font-weight: 500;
+          font-size: 1rem;
+        }
+      }
+      .Select-placeholder {
+        padding: 7px 0;
+      }
+      .Select-clear-zone {
+        height: 30px;
+        vertical-align: middle;
+        padding: 0;
+      }
+      .Select-value-label {
+        text-decoration: underline;
+        text-transform: none;
+        width: auto;
+      }
+      .Select-input {
+        display: inline;
+        height: 0;
+        width: 0;
+        padding: 0;
+      }
+      .Select-multi-value-wrapper {
+        height: 0;
+        padding: 0;
+        display:inline;
+      }
+    }
+    &.small {
+      font-size: 0.9rem;
+    }
+    .Select-placeholder,
+    .Select-input,
+    .Select-input span,
+    input {
+      height: 30px;
+      text-align: left;
+    }
+  }
+  &__text {
+    &_hover:hover {
+      color: #fff;
+      cursor: pointer;
+    }
+  }
+}

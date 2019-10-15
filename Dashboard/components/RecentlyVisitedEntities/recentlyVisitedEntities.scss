@@ -1,0 +1,127 @@
+.dashboardWidgets {
+  width: 100%;
+  max-height: 300px;
+  background: #fff;
+  flex-grow: 1;
+  border: 3px solid #e9ecef;
+  padding: 20px 10px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    flex-shrink: 0;
+    i {
+      cursor: pointer;
+      &:hover {
+        color: #9B9B9B;
+      }
+    }
+  }
+  &__list {
+    margin: 10px 0 0;
+    padding: 0;
+    list-style-type: none;
+    text-align: left;
+    overflow: auto;
+
+    a {
+
+      &:hover {
+        text-decoration: none;
+      }
+      background: darken($gray-lightest, 10);
+    }
+  }
+  .dashboardWidget {
+    font-size: 0.9rem;
+    margin: 10px 0;
+    background-color: $gray-lightest;
+    border-radius: 4px;
+    overflow: hidden;
+    align-items: center;
+
+    &:hover {
+      background-color: darken($gray-lightest, 5);
+    }
+    &:last-child {
+      border-bottom: none;
+    }
+    .dashboardWidget_date {
+      font-weight: 500;
+      font-size: .7rem;
+
+      &_red {
+        color: rgb(255, 137, 137);
+      }
+    }
+    &__date:hover::after {
+      content: attr(data-title)
+    }
+
+    &__type {
+      span {
+        padding: 7px 5px 7px 8px;
+        font-size: .75rem;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        width: 60px;
+        display: block;
+        overflow: hidden;
+      }
+    }
+
+    &__dealItem {
+      .dashboardWidget__type {
+        div {
+          background-color: lighten($brand-success, 30);
+        }
+      }
+    }
+
+    &__contactItem {
+      .dashboardWidget__type {
+        div {
+          background-color: lighten($brand-blue, 40);
+        }
+      }
+    }
+
+    &__leadItem {
+      .dashboardWidget__type {
+        div {
+          background-color: lighten($brand-yellow, 40);
+        }
+      }
+    }
+
+    &__companyItem {
+      .dashboardWidget__type {
+        div {
+          background-color: lighten(#ffdeb0, 5);
+        }
+      }
+    }
+
+    &__offerItem {
+      .dashboardWidget__type {
+        div {
+          background-color: lighten($brand-danger, 15);
+        }
+      }
+    }
+
+    span {
+      color: $brand-black;
+    }
+    a, a:hover {
+      color: #9B9B9B;
+      text-decoration: underline;
+      &:hover {
+        color: #4A4A4A;
+      }
+    }
+  }
+}

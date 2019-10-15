@@ -1,0 +1,86 @@
+.activitiesHistory {
+  width: 100%;
+  max-height: 300px;
+  background: #fff;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  border: 3px solid #e9ecef;
+  padding: 20px 10px;
+  overflow: hidden;
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    flex-shrink: 0;
+  }
+  &__list {
+    margin: 10px 0 0;
+    padding: 0;
+    overflow: auto;
+  }
+  a, a:hover {
+    color: #9B9B9B;
+    &:hover {
+      color: #4A4A4A;
+    }
+    text-decoration: none;
+  }
+  .recentActivityHistory {
+    background-color: rgba(155, 155, 155, 0.08);
+  }
+  .activityHistory {
+    padding-bottom: 10px;
+    margin: 10px 0 0;
+    font-size: 0.9rem;
+    border-bottom: 1px solid #e9ecef;
+    align-items: center;
+    max-width: 100%;
+    text-align: left;
+    &:last-child {
+      border-bottom: none;
+    }
+    &__date {
+      font-weight: 500;
+      padding: 0px;
+      font-size: 0.7rem;
+      &_red {
+        color: rgb(255, 137, 137);
+      }
+    }
+    &__item{
+      padding: 0px;
+    }
+    &__dealItem {
+      width: 30%;
+      background-color: #ffb34a;
+      display: flex;
+    }
+    &__contactItem {
+      width: 30%;
+      background-color: #ffc87d;
+      display: flex;
+    }
+    &__companyItem {
+      width: 30%;
+      background-color: #ffdeb0;
+      display: flex;
+    }
+    &__offerItem {
+      width: 30%;
+      background-color: #fff3e3;
+      display: flex;
+    }
+  }
+  .icon-area {
+    display: flex;
+    border-radius: 50%;
+    background-color: $brand-primary;
+    width: 20px;
+    height: 20px;
+    font-size: 0.6em;
+    text-align: center;
+    padding: 0.7em;
+    color: white;
+    z-index: 900;
+  }
+}
